@@ -1,3 +1,6 @@
+// Ensure that react and react-dom are installed in your project
+/// with the same version as in main.jsx
+
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import ReportForm from './pages/ReportForm';
@@ -5,6 +8,7 @@ import WallOfShame from './pages/WallOfShame';
 import YourRights from './pages/YourRights';
 import About from './pages/About';
 
+import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Navbar, Nav } from 'react-bootstrap';
 
@@ -17,7 +21,7 @@ function App() {
     <Router>
       <Navbar bg="dark" variant="dark" expand="lg">
         <Container>
-          <Navbar.Brand as={Link} to="/">RecruiterWatch</Navbar.Brand>
+          <Navbar.Brand className="brand" as={Link} to="/">RecruiterWatch</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -30,7 +34,7 @@ function App() {
         </Container>
       </Navbar>
 
-      <Container className="mt-4">
+      <Container className="mt-4 p-4 glass-element bg-dark">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/report" element={<ReportForm />} />

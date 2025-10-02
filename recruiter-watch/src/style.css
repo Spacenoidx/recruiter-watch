@@ -1,0 +1,18 @@
+.glass-element {
+  /* Keep these, they are fine */
+  background: rgba(69, 199, 192, 0.2) !important; 
+  border: 1px solid rgba(69, 199, 192, 0.2); 
+  border-radius: 12px;
+  min-height: 100vh;
+
+  /* Use !important on the filter properties that are being crossed out */
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important; 
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #646cff !important;
+  font-style: italic;
+}
